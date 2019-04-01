@@ -59,22 +59,21 @@ public class Course {
         }
         else {
             int allPoints = 0;
-            for(int point: collection){
-                if (point >= 0) {
-                    
-                    counter = counter++;
-                    if (point < min){
-                        min = point;
+            for(int i = 0; i < collection.size(); i++){
+                if (collection.get(i) >= 0) {
+                    if (collection.get(i) < min){
+                        min = collection.get(i);
                     }
-                    if (point > max){
-                        max = point;
+                    if (collection.get(i) > max){
+                        max = collection.get(i);
                     }
-                    allPoints = allPoints + point;
+                    counter++;
+                    allPoints = allPoints + collection.get(i);
                 }
             }
-            
+
             int totalPoints = allPoints-max-min;
-                return totalPoints/(double)(counter-1); 
+            return totalPoints/(counter - 2); 
 
         }
     }
