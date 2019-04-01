@@ -8,12 +8,12 @@ import java.util.ArrayList;
  */
 public class Student {
     private String asurite;
-    private Major major;
+    private MAJOR major;
     private double overall_grade;
     private ArrayList<Course> courses = new ArrayList<Course>();
     private ArrayList<Course> Courses2 = null;
     
-    public Student(String asurite, Major major){
+    public Student(String asurite, MAJOR major){
         this.setAsurite(asurite);
         this.setMajor(major);
         setOverall_grade(0);
@@ -28,7 +28,7 @@ public class Student {
         this.asurite = asurite;
     }
 
-    public Major getMajor() {
+    public MAJOR getMajor() {
         return major;
     }
     
@@ -37,7 +37,7 @@ public class Student {
       return courses.add(course);
   }
 
-    public void setMajor(Major major) {
+    public void setMajor(MAJOR major) {
         this.major = major;
     }
 

@@ -1,8 +1,9 @@
 package main.java;
 
 
-public enum Major {
+public enum MAJOR {
     SER, CS, IT; 
 
 } 
+
 

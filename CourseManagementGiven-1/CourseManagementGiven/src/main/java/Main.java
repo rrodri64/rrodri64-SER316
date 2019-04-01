@@ -11,14 +11,14 @@ public class Main {
 
     public static void main(String[] args)throws Exception {
 
-        students.put("anna", new Student("anna", Major.valueOf("SER")));
-        students.put("karl", new Student("karl", Major.valueOf("CS")));
-        students.put("franz", new Student("franz", Major.valueOf("CS")));
-        students.put("harry", new Student("harry", Major.valueOf("SER")));
-        students.put("aneesh", new Student("aneesh", Major.valueOf("SER")));
-        students.put("rebecca", new Student("rebecca", Major.valueOf("SER")));
-        students.put("alex", new Student("alex", Major.valueOf("SER")));
-        students.put("rose", new Student("rose", Major.valueOf("SER")));
+        students.put("anna", new Student("anna", MAJOR.valueOf("SER")));
+        students.put("karl", new Student("karl", MAJOR.valueOf("CS")));
+        students.put("franz", new Student("franz", MAJOR.valueOf("CS")));
+        students.put("harry", new Student("harry", MAJOR.valueOf("SER")));
+        students.put("aneesh", new Student("aneesh", MAJOR.valueOf("SER")));
+        students.put("rebecca", new Student("rebecca", MAJOR.valueOf("SER")));
+        students.put("alex", new Student("alex", MAJOR.valueOf("SER")));
+        students.put("rose", new Student("rose", MAJOR.valueOf("SER")));
         
         
         
