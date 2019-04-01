@@ -68,7 +68,7 @@ public class GivenBlackbox {
         twoStudent = createCourse("SER316");
         twoStudent.set_points("Hanna",100);
         twoStudent.set_points("Karla",100);
-        // this would be the expected result after the method countOccurencesLetterGrades is called
+        // this would be the expected result after the method gradeFrequency is called
         twoStudentExpected.put("A", 2);
         twoStudentExpected.put("B", 0);
         twoStudentExpected.put("C", 0);
@@ -80,7 +80,7 @@ public class GivenBlackbox {
     // Sample test
     @Test
     public void twoStudent() {
-        HashMap<String, Integer> ans = twoStudent.countOccurencesLetterGrades();
+        HashMap<String, Integer> ans = twoStudent.gradeFrequency();
         System.out.println(ans);
         assertTrue(ans.equals(twoStudentExpected));
     }

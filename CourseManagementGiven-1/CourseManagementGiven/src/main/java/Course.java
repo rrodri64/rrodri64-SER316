@@ -115,7 +115,7 @@ public class Course {
         return students;
     }
     
-    public HashMap<String, Integer> countOccurencesLetterGrades() throws NullPointerException{
+    public HashMap<String, Integer> gradeFrequency() throws NullPointerException{
      	return null;
    
     }
