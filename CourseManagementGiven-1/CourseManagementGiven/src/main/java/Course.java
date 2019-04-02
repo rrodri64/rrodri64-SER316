@@ -57,6 +57,11 @@ public class Course {
         else if(collection.size() == 2 ){
             return (double)(collection.get(0) + collection.get(1))/2;
         }
+        
+        //SER316-start
+        //This function was not averaging the grades correctly, so I fixed it to where
+        //the function will find the minimum, maximum, and determine the average without
+        //negative points.
         else {
             int allPoints = 0;
             for(int i = 0; i < collection.size(); i++){
@@ -74,6 +79,7 @@ public class Course {
 
             int totalPoints = allPoints-max-min;
             return totalPoints/(counter - 2); 
+            //SER316-end
 
         }
     }
@@ -82,8 +88,13 @@ public class Course {
     // if student with the name (asurite member) is not yet included student needs to be added to student list 
     // sets points for a student 
     public void set_points(String name, int points) {
-    	System.out.println(points);
-        this.points.put(name, points);
+    	//SER316-start
+    	//For this method, I added an "if-statement" to check if the student is included
+    	if(!this.points.containsKey(name)) {
+    		System.out.println(points);
+            this.points.put(name, points);
+    	}
+    	//SER316-end
     }
     
     
@@ -91,9 +102,19 @@ public class Course {
     // Students should only be added when they are not yet in the course (names (asurite member) needs to be unique)
     ArrayList<Student> students  = new ArrayList<Student>();
     public boolean addStudent(Student s) {
-        students.add(s);
-        points.put(s.getAsurite(), -1);
-        return true;
+    	//SER316-start
+    	//In this method, I added a check to determine if the student already exists
+    	if(students.contains(s)) {
+    		System.out.println("Student already exists!");
+    		return false;
+    	}
+    	
+    	else {
+    		students.add(s);
+            points.put(s.getAsurite(), -1);
+            return true;
+    	}
+        //SER316-end
     }
 
 

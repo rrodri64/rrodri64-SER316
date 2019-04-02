@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.java.CourseTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-04-02T04:47:31" hostname="DESKTOP-PRVON8T" time="0.01">
+  <properties/>
+  <testcase name="testMultipleStudents" classname="test.java.CourseTest" time="0.007"/>
+  <testcase name="testMultipleStudents2" classname="test.java.CourseTest" time="0.0"/>
+  <testcase name="testAverageWithoutMinWithoutMax" classname="test.java.CourseTest" time="0.0"/>
+  <testcase name="testTwoStudents" classname="test.java.CourseTest" time="0.0"/>
+  <testcase name="testAddingStudent" classname="test.java.CourseTest" time="0.001"/>
+  <testcase name="testMultipleStudentsNegative" classname="test.java.CourseTest" time="0.0"/>
+  <system-out><![CDATA[40
+35
+30
+35
+40
+30
+35
+40
+23
+21
+Student already exists!
+-40
+-30
+-35
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
