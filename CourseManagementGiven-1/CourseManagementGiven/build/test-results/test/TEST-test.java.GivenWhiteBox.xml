@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.java.GivenWhiteBox" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-04-08T07:36:46" hostname="DESKTOP-PRVON8T" time="0.008">
-  <properties/>
-  <testcase name="testAverageWithoutMinWithoutMax" classname="test.java.GivenWhiteBox" time="0.008"/>
-  <system-out><![CDATA[50
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
