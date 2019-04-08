@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="rrodri64-SER316">
+    <property environment="env"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="rrodri64-SER316.classpath"/>
+    <path id="run.CourseTest.classpath">
+        <path refid="rrodri64-SER316.classpath"/>
+    </path>
+    <path id="run.CourseTest.bootclasspath"/>
+    <path id="run.GivenWhiteBox.classpath">
+        <path refid="rrodri64-SER316.classpath"/>
+    </path>
+    <path id="run.GivenWhiteBox.bootclasspath"/>
+    <path id="run.Main (1).classpath">
+        <path refid="rrodri64-SER316.classpath"/>
+    </path>
+    <path id="run.Main (1).bootclasspath"/>
+    <path id="run.Main.classpath">
+        <path refid="rrodri64-SER316.classpath"/>
+    </path>
+    <path id="run.Main.bootclasspath"/>
+    <target name="init"/>
+    <target name="clean"/>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="CourseTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="test.java.CourseTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.CourseTest.classpath"/>
+            <bootclasspath>
+                <path refid="run.CourseTest.bootclasspath"/>
+            </bootclasspath>
+        </junit>
+    </target>
+    <target name="GivenWhiteBox">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="test.java.GivenWhiteBox" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.GivenWhiteBox.classpath"/>
+            <bootclasspath>
+                <path refid="run.GivenWhiteBox.bootclasspath"/>
+            </bootclasspath>
+        </junit>
+    </target>
+    <target name="Main (1)">
+        <java classname="main.java.Main" failonerror="true" fork="yes">
+            <classpath refid="run.Main (1).classpath"/>
+            <bootclasspath>
+                <path refid="run.Main (1).bootclasspath"/>
+            </bootclasspath>
+        </java>
+    </target>
+    <target name="Main">
+        <java classname="Main" failonerror="true" fork="yes">
+            <classpath refid="run.Main.classpath"/>
+            <bootclasspath>
+                <path refid="run.Main.bootclasspath"/>
+            </bootclasspath>
+        </java>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>
