@@ -58,9 +58,7 @@ includeTestsMatching "CourseTest"
    toolVersion = '3.1.12'
  }
 
-
  // To generate an HTML report instead of XML
-
  tasks.withType(com.github.spotbugs.SpotBugsTask) {
    reports {
      xml.enabled = false
