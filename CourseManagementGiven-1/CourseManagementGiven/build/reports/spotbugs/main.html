@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>SpotBugs Report</title>
+        <style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+		    color: red;
+		    font-weight: bold;
+		}
+		.priority-2 {
+		    color: orange;
+		    font-weight: bold;
+		}
+		.priority-3 {
+		    color: green;
+		    font-weight: bold;
+		}
+		.priority-4 {
+		    color: blue;
+		    font-weight: bold;
+		}
+		</style>
+        <script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+    </head>
+    <body>
+        <h1>
+            <a href="https://spotbugs.github.io/">SpotBugs</a>
+             Report
+        </h1>
+        <h2>Project Information</h2>
+        <p>Project: 
+		</p>
+        <p>SpotBugs version: 3.1.12</p>
+        <p>Code analyzed:</p>
+        <ul>
+            <li>D:\Users\Rebecca372\rrodri64-SER316\CourseManagementGiven-1\CourseManagementGiven\build\classes\java\main\main\java\Course.class</li>
+            <li>D:\Users\Rebecca372\rrodri64-SER316\CourseManagementGiven-1\CourseManagementGiven\build\classes\java\main\main\java\Main.class</li>
+            <li>D:\Users\Rebecca372\rrodri64-SER316\CourseManagementGiven-1\CourseManagementGiven\build\classes\java\main\main\java\MAJOR.class</li>
+            <li>D:\Users\Rebecca372\rrodri64-SER316\CourseManagementGiven-1\CourseManagementGiven\build\classes\java\main\main\java\Student.class</li>
+        </ul>
+        <p>
+            <br />
+            <br />
+        </p>
+        <h2>Metrics</h2>
+        <p>134 lines of code analyzed,
+	in 4 classes, 
+	in 1 packages.</p>
+        <table width="500" cellpadding="5" cellspacing="2">
+            <tr class="tableheader">
+                <th align="left">Metric</th>
+                <th align="right">Total</th>
+                <th align="right">Density*</th>
+            </tr>
+            <tr class="tablerow0">
+                <td>High Priority Warnings</td>
+                <td align="right">1</td>
+                <td align="right">7.46</td>
+            </tr>
+            <tr class="tablerow1">
+                <td>Medium Priority Warnings</td>
+                <td align="right">7</td>
+                <td align="right">52.24</td>
+            </tr>
+            <tr class="$totalClass">
+                <td>
+                    <b>Total Warnings</b>
+                </td>
+                <td align="right">
+                    <b>8</b>
+                </td>
+                <td align="right">
+                    <b>59.70</b>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <i>(* Defects per Thousand lines of non-commenting source statements)</i>
+        </p>
+        <p>
+            <br />
+            <br />
+        </p>
+        <h2>Contents</h2>
+        <ul>
+            <li>
+                <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+            </li>
+            <li>
+                <a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+            </li>
+            <li>
+                <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+            </li>
+            <li>
+                <a href="#Details">Details</a>
+            </li>
+        </ul>
+        <h1>Summary</h1>
+        <table width="500" cellpadding="5" cellspacing="2">
+            <tr class="tableheader">
+                <th align="left">Warning Type</th>
+                <th align="right">Number</th>
+            </tr>
+            <tr class="tablerow0">
+                <td>
+                    <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+                </td>
+                <td align="right">3</td>
+            </tr>
+            <tr class="tablerow1">
+                <td>
+                    <a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+                </td>
+                <td align="right">3</td>
+            </tr>
+            <tr class="tablerow0">
+                <td>
+                    <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+                </td>
+                <td align="right">2</td>
+            </tr>
+            <tr class="tablerow1">
+                <td>
+                    <b>Total</b>
+                </td>
+                <td align="right">
+                    <b>8</b>
+                </td>
+            </tr>
+        </table>
+        <h1>Warnings</h1>
+        <p>Click on a warning row to see full context information.</p>
+        <h2>
+            <a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+        </h2>
+        <table class="warningtable" width="100%" cellspacing="0">
+            <tr class="tableheader">
+                <th align="left">Code</th>
+                <th align="left">Warning</th>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N65696');">
+                <td>
+                    <span class="priority-2">Nm</span>
+                </td>
+                <td>The method name main.java.Course.GetName() doesn't start with a lower case letter</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N65696" style="display: none;">
+                        <a href="#NM_METHOD_NAMING_CONVENTION">Bug type NM_METHOD_NAMING_CONVENTION (click for details)</a>
+                        <br />
+                        In class main.java.Course
+                        <br />
+                        In method main.java.Course.GetName()
+                        <br />
+                        At Course.java:[line 26]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N65749');">
+                <td>
+                    <span class="priority-2">Nm</span>
+                </td>
+                <td>The method name main.java.Course.GetPoints() doesn't start with a lower case letter</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N65749" style="display: none;">
+                        <a href="#NM_METHOD_NAMING_CONVENTION">Bug type NM_METHOD_NAMING_CONVENTION (click for details)</a>
+                        <br />
+                        In class main.java.Course
+                        <br />
+                        In method main.java.Course.GetPoints()
+                        <br />
+                        At Course.java:[line 122]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N65802');">
+                <td>
+                    <span class="priority-2">Nm</span>
+                </td>
+                <td>The method name main.java.Course.SetName(String) doesn't start with a lower case letter</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N65802" style="display: none;">
+                        <a href="#NM_METHOD_NAMING_CONVENTION">Bug type NM_METHOD_NAMING_CONVENTION (click for details)</a>
+                        <br />
+                        In class main.java.Course
+                        <br />
+                        In method main.java.Course.SetName(String)
+                        <br />
+                        At Course.java:[lines 30-31]
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <h2>
+            <a name="Warnings_PERFORMANCE">Performance Warnings</a>
+        </h2>
+        <table class="warningtable" width="100%" cellspacing="0">
+            <tr class="tableheader">
+                <th align="left">Code</th>
+                <th align="left">Warning</th>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N65855');">
+                <td>
+                    <span class="priority-2">Bx</span>
+                </td>
+                <td>Primitive boxed just to call toString in main.java.Main.main(String[])</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N65855" style="display: none;">
+                        <a href="#DM_BOXED_PRIMITIVE_TOSTRING">Bug type DM_BOXED_PRIMITIVE_TOSTRING (click for details)</a>
+                        <br />
+                        In class main.java.Main
+                        <br />
+                        In method main.java.Main.main(String[])
+                        <br />
+                        Called method Integer.toString()
+                        <br />
+                        Should call Integer.toString(int) instead
+                        <br />
+                        At Main.java:[line 30]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N65932');">
+                <td>
+                    <span class="priority-2">Bx</span>
+                </td>
+                <td>main.java.Main.main(String[]) invokes inefficient new Integer(int) constructor; use Integer.valueOf(int) instead</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N65932" style="display: none;">
+                        <a href="#DM_NUMBER_CTOR">Bug type DM_NUMBER_CTOR (click for details)</a>
+                        <br />
+                        In class main.java.Main
+                        <br />
+                        In method main.java.Main.main(String[])
+                        <br />
+                        Called method new Integer(int)
+                        <br />
+                        Should call Integer.valueOf(int) instead
+                        <br />
+                        At Main.java:[line 30]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N66017');">
+                <td>
+                    <span class="priority-2">UrF</span>
+                </td>
+                <td>Unread field: main.java.Student.Courses2</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N66017" style="display: none;">
+                        <a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+                        <br />
+                        In class main.java.Student
+                        <br />
+                        Field main.java.Student.Courses2
+                        <br />
+                        At Student.java:[line 14]
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <h2>
+            <a name="Warnings_STYLE">Dodgy code Warnings</a>
+        </h2>
+        <table class="warningtable" width="100%" cellspacing="0">
+            <tr class="tableheader">
+                <th align="left">Code</th>
+                <th align="left">Warning</th>
+            </tr>
+            <tr class="tablerow1" onclick="toggleRow('N65572');">
+                <td>
+                    <span class="priority-1">DLS</span>
+                </td>
+                <td>Dead store to values in main.java.Course.printCourseStats()</td>
+            </tr>
+            <tr class="detailrow1">
+                <td />
+                <td>
+                    <p id="N65572" style="display: none;">
+                        <a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
+                        <br />
+                        In class main.java.Course
+                        <br />
+                        In method main.java.Course.printCourseStats()
+                        <br />
+                        Local variable named values
+                        <br />
+                        At Course.java:[line 35]
+                    </p>
+                </td>
+            </tr>
+            <tr class="tablerow0" onclick="toggleRow('N65642');">
+                <td>
+                    <span class="priority-2">ICAST</span>
+                </td>
+                <td>Integral division result cast to double or float in main.java.Course.calculateAverageWithoutMinWithoutMax()</td>
+            </tr>
+            <tr class="detailrow0">
+                <td />
+                <td>
+                    <p id="N65642" style="display: none;">
+                        <a href="#ICAST_IDIV_CAST_TO_DOUBLE">Bug type ICAST_IDIV_CAST_TO_DOUBLE (click for details)</a>
+                        <br />
+                        In class main.java.Course
+                        <br />
+                        In method main.java.Course.calculateAverageWithoutMinWithoutMax()
+                        <br />
+                        At Course.java:[line 81]
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <h1>
+            <a name="Details">Details</a>
+        </h1>
+        <h2>
+            <a name="DM_BOXED_PRIMITIVE_TOSTRING">DM_BOXED_PRIMITIVE_TOSTRING: Method allocates a boxed primitive just to call toString</a>
+        </h2>
+          <p>A boxed primitive is allocated just to call toString(). It is more effective to just use the static
+  form of toString which takes the primitive value. So,</p>
+  <table>
+     <tr><th>Replace...</th><th>With this...</th></tr>
+     <tr><td>new Integer(1).toString()</td><td>Integer.toString(1)</td></tr>
+     <tr><td>new Long(1).toString()</td><td>Long.toString(1)</td></tr>
+     <tr><td>new Float(1.0).toString()</td><td>Float.toString(1.0)</td></tr>
+     <tr><td>new Double(1.0).toString()</td><td>Double.toString(1.0)</td></tr>
+     <tr><td>new Byte(1).toString()</td><td>Byte.toString(1)</td></tr>
+     <tr><td>new Short(1).toString()</td><td>Short.toString(1)</td></tr>
+     <tr><td>new Boolean(true).toString()</td><td>Boolean.toString(true)</td></tr>
+  </table>
+
+    
+        <h2>
+            <a name="DM_NUMBER_CTOR">DM_NUMBER_CTOR: Method invokes inefficient Number constructor; use static valueOf instead</a>
+        </h2>
+              
+      <p>
+      Using <code>new Integer(int)</code> is guaranteed to always result in a new object whereas
+      <code>Integer.valueOf(int)</code> allows caching of values to be done by the compiler, class library, or JVM.
+      Using of cached values avoids object allocation and the code will be faster.
+      </p>
+      <p>
+      Values between -128 and 127 are guaranteed to have corresponding cached instances
+      and using <code>valueOf</code> is approximately 3.5 times faster than using constructor.
+      For values outside the constant range the performance of both styles is the same.
+      </p>
+      <p>
+      Unless the class must be compatible with JVMs predating Java 1.5,
+      use either autoboxing or the <code>valueOf()</code> method when creating instances of
+      <code>Long</code>, <code>Integer</code>, <code>Short</code>, <code>Character</code>, and <code>Byte</code>.
+      </p>
+      
+    
+        <h2>
+            <a name="DLS_DEAD_LOCAL_STORE">DLS_DEAD_LOCAL_STORE: Dead store to local variable</a>
+        </h2>
+        <p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables.  Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    
+        <h2>
+            <a name="ICAST_IDIV_CAST_TO_DOUBLE">ICAST_IDIV_CAST_TO_DOUBLE: Integral division result cast to double or float</a>
+        </h2>
+        <p>
+This code casts the result of an integral division (e.g., int or long division)
+operation to double or
+float.
+Doing division on integers truncates the result
+to the integer value closest to zero.  The fact that the result
+was cast to double suggests that this precision should have been retained.
+What was probably meant was to cast one or both of the operands to
+double <em>before</em> performing the division.  Here is an example:
+</p>
+<pre><code>int x = 2;
+int y = 5;
+// Wrong: yields result 0.0
+double value1 = x / y;
+
+// Right: yields result 0.4
+double value2 = x / (double) y;
+</code></pre>
+
+    
+        <h2>
+            <a name="NM_METHOD_NAMING_CONVENTION">NM_METHOD_NAMING_CONVENTION: Method names should start with a lower case letter</a>
+        </h2>
+          <p>
+Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each internal word capitalized.
+</p>
+
+    
+        <h2>
+            <a name="URF_UNREAD_FIELD">URF_UNREAD_FIELD: Unread field</a>
+        </h2>
+          <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    
+    </body>
+</html>
