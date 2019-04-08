@@ -1,4 +1,8 @@
 # Compiled class file
+*.classpath
+*.project
+*.settings
+.DS_Store
 
 # Log file
 *.log
