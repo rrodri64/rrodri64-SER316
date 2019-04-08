@@ -58,11 +58,9 @@ includeTestsMatching "CourseTest"
    toolVersion = '3.1.12'
  }
 
-<<<<<<< HEAD
+
  // To generate an HTML report instead of XML
-=======
-// // To generate an HTML report instead of XML
->>>>>>> StaticAnalysis
+
  tasks.withType(com.github.spotbugs.SpotBugsTask) {
    reports {
      xml.enabled = false

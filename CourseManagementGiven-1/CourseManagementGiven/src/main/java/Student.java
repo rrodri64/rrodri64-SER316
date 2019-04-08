@@ -11,15 +11,10 @@ public class Student {
     private MAJOR major;
     private double overall_grade;
     private ArrayList<Course> courses = new ArrayList<Course>();
-<<<<<<< HEAD
     private ArrayList<Course> Courses2 = null;
-    
-    public Student(String asurite, MAJOR major){
-=======
-    //SER316 TASK 2 SPOTBUGS FIX
 
-    public Student(String asurite, Major major) {
->>>>>>> StaticAnalysis
+    public Student(String asurite, MAJOR major){
+        //SER316 TASK 4 SPOTBUGS FIX
         this.setAsurite(asurite);
         this.setMajor(major);
         setOverall_grade(0);

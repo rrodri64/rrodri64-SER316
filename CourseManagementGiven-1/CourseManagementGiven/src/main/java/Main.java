@@ -11,7 +11,6 @@ public class Main {
 
     public static void main(String[] args)throws Exception {
 
-<<<<<<< HEAD
         students.put("anna", new Student("anna", MAJOR.valueOf("SER")));
         students.put("karl", new Student("karl", MAJOR.valueOf("CS")));
         students.put("franz", new Student("franz", MAJOR.valueOf("CS")));
@@ -20,22 +19,11 @@ public class Main {
         students.put("rebecca", new Student("rebecca", MAJOR.valueOf("SER")));
         students.put("alex", new Student("alex", MAJOR.valueOf("SER")));
         students.put("rose", new Student("rose", MAJOR.valueOf("SER")));
-        
-        
-        
-=======
-        students.put("anna", new Student("anna", Major.valueOf("SER")));
-        students.put("karl", new Student("karl", Major.valueOf("CS")));
-        students.put("franz", new Student("franz", Major.valueOf("CS")));
-        students.put("harry", new Student("harry", Major.valueOf("SER")));
-        students.put("aneesh", new Student("aneesh", Major.valueOf("SER")));
-        students.put("rebecca", new Student("rebecca", Major.valueOf("SER")));
-        students.put("alex", new Student("alex", Major.valueOf("SER")));
-        students.put("rose", new Student("rose", Major.valueOf("SER")));
 
 
 
->>>>>>> StaticAnalysis
+        //SER316 TASK 4 SPOTBUGS FIX
+
         courses.put("SER316", new CourseGrades0("SER316"));
         courses.put("SER315", new CourseGrades0("SER315"));
         courses.put("SC232", new CourseGrades0("CS232"));

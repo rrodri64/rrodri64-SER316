@@ -33,7 +33,7 @@ public class Course {
 
 
     public void printCourseStats() {
-      //SER316 TASK 2 SPOTBUGS FIX
+        //SER316 TASK 4 SPOTBUGS FIX
 
         System.out.print("Average Grades without max and without min: ");
         System.out.println(this.calculateAverageWithoutMinWithoutMax());
@@ -54,19 +54,18 @@ public class Course {
         int max = Integer.MIN_VALUE;
         if (collection.size() == 1) {
             return collection.get(0);
-        
+
 
         } else if(collection.size() == 2 ) {
             return (double)(collection.get(0) + collection.get(1)) / 2;
         }
-        
+
         //SER316-start
         //This function was not averaging the grades correctly, so I fixed it to where
         //the function will find the minimum, maximum, and determine the average without
         //negative points.
         else {
             int allPoints = 0;
-<<<<<<< HEAD
             for(int i = 0; i < collection.size(); i++){
                 if (collection.get(i) >= 0) {
                     if (collection.get(i) < min){
@@ -74,32 +73,17 @@ public class Course {
                     }
                     if (collection.get(i) > max){
                         max = collection.get(i);
-=======
-            for (int point: collection) {
-                if (point >= 0) {
-
-                    //SER316 TASK 2 SPOTBUGS FIX
-                    counter++;
-                    if (point < min) {
-                        min = point;
-                    }
-                    if (point > max) {
-                        max = point;
->>>>>>> StaticAnalysis
+                        //SER316 TASK 4 SPOTBUGS FIX
                     }
                     counter++;
                     allPoints = allPoints + collection.get(i);
                 }
             }
 
-<<<<<<< HEAD
             int totalPoints = allPoints-max-min;
             return totalPoints/(counter - 2); 
             //SER316-end
-=======
-            int totalPoints = allPoints - max - min;
-            return totalPoints / (double)(counter - 1); 
->>>>>>> StaticAnalysis
+            //SER316 TASK 4 SPOTBUGS FIX
 
         }
     }
@@ -109,18 +93,14 @@ public class Course {
     //student needs to be added to student list 
     // sets points for a student 
     public void set_points(String name, int points) {
-<<<<<<< HEAD
-    	//SER316-start
-    	//For this method, I added an "if-statement" to check if the student is included
-    	if(!this.points.containsKey(name)) {
-    		System.out.println(points);
+        //SER316-start
+        //For this method, I added an "if-statement" to check if the student is included
+        if(!this.points.containsKey(name)) {
+            System.out.println(points);
             this.points.put(name, points);
-    	}
-    	//SER316-end
-=======
-        System.out.println(points);
-        this.points.put(name, points);
->>>>>>> StaticAnalysis
+        }
+        //SER316-end
+        //SER316 TASK 4 SPOTBUGS FIX
     }
 
 
@@ -129,18 +109,18 @@ public class Course {
     //(names (asurite member) needs to be unique)
     ArrayList<Student> students  = new ArrayList<Student>();
     public boolean addStudent(Student s) {
-    	//SER316-start
-    	//In this method, I added a check to determine if the student already exists
-    	if(students.contains(s)) {
-    		System.out.println("Student already exists!");
-    		return false;
-    	}
-    	
-    	else {
-    		students.add(s);
+        //SER316-start
+        //In this method, I added a check to determine if the student already exists
+        if(students.contains(s)) {
+            System.out.println("Student already exists!");
+            return false;
+        }
+
+        else {
+            students.add(s);
             points.put(s.getAsurite(), -1);
             return true;
-    	}
+        }
         //SER316-end
     }
 
@@ -162,17 +142,11 @@ public class Course {
     public ArrayList<Student> getStudents() {
         return students;
     }
-<<<<<<< HEAD
-    
-    public HashMap<String, Integer> gradeFrequency() throws NullPointerException{
-     	return null;
-   
-=======
 
-    public HashMap<String, Integer> countOccurencesLetterGrades() throws NullPointerException{
+    public HashMap<String, Integer> gradeFrequency() throws NullPointerException{
         return null;
 
->>>>>>> StaticAnalysis
+        //SER316 TASK 4 SPOTBUGS FIX
     }
 
 
