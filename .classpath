@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry excluding="CourseManagementGiven-1/CourseManagementGiven/cls/" kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="CourseManagementGiven-1/CourseManagementGiven/src"/>
-<<<<<<< HEAD
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="CourseManagementGiven-1/CourseManagementGiven/cls"/>
-	<classpathentry kind="output" path="bin1"/>
-=======
-	<classpathentry kind="lib" path="CourseManagementGiven-1/CourseManagementGiven/build/libs/CourseManagementGiven.jar"/>
-	<classpathentry kind="lib" path="CourseManagementGiven-1/CourseManagementGiven/build/tmp/expandedArchives/org.jacoco.agent-0.8.2.jar_2aca8b620b19ecd063f63feff8caaa38/jacocoagent.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="CourseManagementGiven-1/CourseManagementGiven/cls"/>
-	<classpathentry kind="output" path="CourseManagementGiven-1/CourseManagementGiven/build/classes/java/main"/>
->>>>>>> Blackbox
+	<classpathentry kind="output" path="bin"/>
 </classpath>
