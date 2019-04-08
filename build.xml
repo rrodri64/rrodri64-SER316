@@ -23,7 +23,7 @@
     <target name="init">
         <mkdir dir="CourseManagementGiven/build/classes/java/main"/>
         <copy includeemptydirs="false" todir="CourseManagementGiven/build/classes/java/main">
-            <fileset dir="CourseManagementGiven/src">
+            <fileset dir="CourseManagementGiven-1/CourseManagementGiven/src">
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
