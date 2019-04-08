@@ -29,8 +29,10 @@ public class Main {
         courses.put("SC232", new CourseGrades0("CS232"));
 
         Integer marksRose;
-        System.out.println("Anna has scored " + 
-                Integer.toString(40) + 
+        System.out.println("Anna has scored " 
+                + 
+                Integer.toString(40) 
+                + 
                 " marks which makes her the topper."); //SER316 TASK 2 SPOTBUGS FIX
         courses.get("SER315").set_points("anna", 40);
         courses.get("SER315").set_points("harry", 20);

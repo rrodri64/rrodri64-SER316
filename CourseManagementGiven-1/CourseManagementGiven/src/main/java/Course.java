@@ -56,22 +56,22 @@ public class Course {
             return collection.get(0);
 
 
-        } else if(collection.size() == 2 ) {
+        } else if (collection.size() == 2) {
             return (double)(collection.get(0) + collection.get(1)) / 2;
-        }
+        
 
         //SER316-start
         //This function was not averaging the grades correctly, so I fixed it to where
         //the function will find the minimum, maximum, and determine the average without
         //negative points.
-        else {
+        } else {
             int allPoints = 0;
-            for(int i = 0; i < collection.size(); i++){
+            for(int i = 0; i < collection.size(); i++) {
                 if (collection.get(i) >= 0) {
-                    if (collection.get(i) < min){
+                    if (collection.get(i) < min) {
                         min = collection.get(i);
                     }
-                    if (collection.get(i) > max){
+                    if (collection.get(i) > max) {
                         max = collection.get(i);
                         //SER316 TASK 4 SPOTBUGS FIX
                     }
@@ -80,8 +80,9 @@ public class Course {
                 }
             }
 
-            int totalPoints = allPoints-max-min;
-            return totalPoints/(counter - 2); 
+            int totalPoints = allPoints - max - min;
+            //SER316 TASK 4 SPOTBUGS FIX
+            return totalPoints / (double)(counter - 2); 
             //SER316-end
             //SER316 TASK 4 SPOTBUGS FIX
 
@@ -95,7 +96,7 @@ public class Course {
     public void set_points(String name, int points) {
         //SER316-start
         //For this method, I added an "if-statement" to check if the student is included
-        if(!this.points.containsKey(name)) {
+        if (!this.points.containsKey(name)) {
             System.out.println(points);
             this.points.put(name, points);
         }
@@ -108,15 +109,16 @@ public class Course {
     // Students should only be added when they are not yet in the course,
     //(names (asurite member) needs to be unique)
     ArrayList<Student> students  = new ArrayList<Student>();
+    
     public boolean addStudent(Student s) {
         //SER316-start
         //In this method, I added a check to determine if the student already exists
-        if(students.contains(s)) {
+        if (students.contains(s)) {
             System.out.println("Student already exists!");
             return false;
-        }
+        
 
-        else {
+        } else {
             students.add(s);
             points.put(s.getAsurite(), -1);
             return true;
@@ -143,7 +145,7 @@ public class Course {
         return students;
     }
 
-    public HashMap<String, Integer> gradeFrequency() throws NullPointerException{
+    public HashMap<String, Integer> gradeFrequency() throws NullPointerException {
         return null;
 
         //SER316 TASK 4 SPOTBUGS FIX

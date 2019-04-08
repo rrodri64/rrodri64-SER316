@@ -15,7 +15,6 @@ import main.java.MAJOR;
 
 public class CourseTest {
     Course oneStudent;
-    Course twoStudents;
     Course moreStudents;
     Course c;
     
