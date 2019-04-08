@@ -19,9 +19,9 @@ public class Main {
         students.put("rebecca", new Student("rebecca", MAJOR.valueOf("SER")));
         students.put("alex", new Student("alex", MAJOR.valueOf("SER")));
         students.put("rose", new Student("rose", MAJOR.valueOf("SER")));
-        
-        
-        
+
+
+
         courses.put("SER316", new CourseGrades0("SER316"));
         courses.put("SER315", new CourseGrades0("SER315"));
         courses.put("SC232", new CourseGrades0("CS232"));
@@ -34,10 +34,10 @@ public class Main {
         courses.get("SER315").set_points("rebecca", 10);
         courses.get("SER315").set_points("alex", 30);
         courses.get("SER315").set_points("rose", 23);
-        
-        
+
+
         courses.get("SER315").printCourseStats();
 
-     
+
     }
 }
