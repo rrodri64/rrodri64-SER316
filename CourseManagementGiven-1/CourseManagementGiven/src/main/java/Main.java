@@ -28,8 +28,8 @@ public class Main {
 
         Integer marksRose;
         System.out.println("Anna has scored " + 
-                new Integer(40).toString() + 
-                " marks which makes her the topper.");
+                Integer.toString(40) + 
+                " marks which makes her the topper."); //SER316 TASK 2 SPOTBUGS FIX
         courses.get("SER315").set_points("anna", 40);
         courses.get("SER315").set_points("harry", 20);
         courses.get("SER315").set_points("aneesh", 30);
