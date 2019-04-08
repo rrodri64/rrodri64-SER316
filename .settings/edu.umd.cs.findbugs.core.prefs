@@ -1,5 +1,9 @@
 #SpotBugs User Preferences
+<<<<<<< HEAD
 #Mon Apr 08 00:51:18 MST 2019
+=======
+#Mon Apr 08 00:03:09 MST 2019
+>>>>>>> StaticAnalysis
 detectorAppendingToAnObjectOutputStream=AppendingToAnObjectOutputStream|true
 detectorAtomicityProblem=AtomicityProblem|true
 detectorBadAppletConstructor=BadAppletConstructor|false

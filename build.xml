@@ -9,6 +9,7 @@
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
     <property name="source" value="1.8"/>
+<<<<<<< HEAD
     <path id="rrodri64-SER316.classpath"/>
     <path id="run.CourseTest.classpath">
         <path refid="rrodri64-SER316.classpath"/>
@@ -28,6 +29,30 @@
     <path id="run.Main.bootclasspath"/>
     <target name="init"/>
     <target name="clean"/>
+=======
+    <path id="JUnit 4.libraryclasspath">
+        <pathelement location="../Downloads/eclipse-java-oxygen-3a-win32-x86_64 (1)/eclipse/plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
+        <pathelement location="../Downloads/eclipse-java-oxygen-3a-win32-x86_64 (1)/eclipse/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+    </path>
+    <path id="rrodri64-SER316.classpath">
+        <pathelement location="CourseManagementGiven-1/CourseManagementGiven/build/classes/java/main"/>
+        <pathelement location="CourseManagementGiven-1/CourseManagementGiven/build/libs/CourseManagementGiven.jar"/>
+        <pathelement location="CourseManagementGiven-1/CourseManagementGiven/build/tmp/expandedArchives/org.jacoco.agent-0.8.2.jar_2aca8b620b19ecd063f63feff8caaa38/jacocoagent.jar"/>
+        <path refid="JUnit 4.libraryclasspath"/>
+        <pathelement location="CourseManagementGiven-1/CourseManagementGiven/cls"/>
+    </path>
+    <target name="init">
+        <mkdir dir="CourseManagementGiven-1/CourseManagementGiven/build/classes/java/main"/>
+        <copy includeemptydirs="false" todir="CourseManagementGiven-1/CourseManagementGiven/build/classes/java/main">
+            <fileset dir="CourseManagementGiven-1/CourseManagementGiven/src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="CourseManagementGiven-1/CourseManagementGiven/build/classes/java/main"/>
+    </target>
+>>>>>>> StaticAnalysis
     <target depends="clean" name="cleanall"/>
     <target depends="build-subprojects,build-project" name="build"/>
     <target name="build-subprojects"/>
@@ -54,10 +79,14 @@
             <formatter type="xml"/>
             <test name="test.java.CourseTest" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
+<<<<<<< HEAD
             <classpath refid="run.CourseTest.classpath"/>
             <bootclasspath>
                 <path refid="run.CourseTest.bootclasspath"/>
             </bootclasspath>
+=======
+            <classpath refid="rrodri64-SER316.classpath"/>
+>>>>>>> StaticAnalysis
         </junit>
     </target>
     <target name="GivenWhiteBox">
@@ -66,26 +95,38 @@
             <formatter type="xml"/>
             <test name="test.java.GivenWhiteBox" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
+<<<<<<< HEAD
             <classpath refid="run.GivenWhiteBox.classpath"/>
             <bootclasspath>
                 <path refid="run.GivenWhiteBox.bootclasspath"/>
             </bootclasspath>
+=======
+            <classpath refid="rrodri64-SER316.classpath"/>
+>>>>>>> StaticAnalysis
         </junit>
     </target>
     <target name="Main (1)">
         <java classname="main.java.Main" failonerror="true" fork="yes">
+<<<<<<< HEAD
             <classpath refid="run.Main (1).classpath"/>
             <bootclasspath>
                 <path refid="run.Main (1).bootclasspath"/>
             </bootclasspath>
+=======
+            <classpath refid="rrodri64-SER316.classpath"/>
+>>>>>>> StaticAnalysis
         </java>
     </target>
     <target name="Main">
         <java classname="Main" failonerror="true" fork="yes">
+<<<<<<< HEAD
             <classpath refid="run.Main.classpath"/>
             <bootclasspath>
                 <path refid="run.Main.bootclasspath"/>
             </bootclasspath>
+=======
+            <classpath refid="rrodri64-SER316.classpath"/>
+>>>>>>> StaticAnalysis
         </java>
     </target>
     <target name="junitreport">
