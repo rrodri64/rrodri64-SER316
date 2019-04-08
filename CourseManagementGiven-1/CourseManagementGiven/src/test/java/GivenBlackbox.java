@@ -25,13 +25,13 @@ import java.lang.reflect.Constructor;
 @RunWith(Parameterized.class)
 public class GivenBlackbox {
     private Class<Course> classUnderTest;
-    
-    
+
+
     @SuppressWarnings("unchecked")
     public GivenBlackbox(Object classUnderTest) {
         this.classUnderTest = (Class<Course>) classUnderTest;
     }
-    
+
     // Defining all the classes that need to be tested
     @Parameters
     public static Collection<Object[]> courseGradesUnderTest() {
@@ -45,25 +45,25 @@ public class GivenBlackbox {
         };
         return Arrays.asList(classes);
     }
-    
+
     // method to call the correct constructor
     private Course createCourse(String name) throws Exception {
         Constructor<Course> constructor = classUnderTest.getConstructor(String.class);
         return constructor.newInstance(name);
     }
-    
+
 
     // A sample course
     Course twoStudent;
     HashMap<String, Integer> twoStudentExpected = new HashMap<String, Integer>(); 
-    
-    
+
+
     @Before
     public void setUp() throws Exception {
-        
+
         // all courses should be created like this
-        
-        
+
+
         // Course created with two Students having
         twoStudent = createCourse("SER316");
         twoStudent.set_points("Hanna",100);
